@@ -1,0 +1,72 @@
+
+.load{
+    height: 200px;
+    width: 200px;
+    border: 12px solid black;
+    border-radius: 50%;
+    border-top-color: aqua;
+    animation: spin 1s ease infinite;
+}
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.bac2{
+    background-color: rgba(0, 0, 0, 0.059);
+    display: flex;
+    justify-content: center;
+}
+
+.moon{
+    background: rgba(0, 0, 0, 0.082);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+}
+.moon::before{
+    content: "";
+    background-color: #ffff;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    animation: 3.7s animation linear infinite alternate;
+}
+@keyframes animation {
+    0%{
+        transform: translateX(40px) scale(0.9);
+        box-shadow: none;
+    }
+    50%{
+        transform: translate(0px,0px) scale(1.07);
+        box-shadow: 0 0 10px #ffff,0 0 80px 2px #ffff;
+    }
+    100%{
+        transform: translateX(-40px) scale(0.9);
+        box-shadow: none;
+    }
+}
+
+.naming{
+    font-size: 150px;
+    font-weight: bolder;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    background-image: url("./image/Capture\ d’écran\ 2025-05-22\ 194454.png");
+    animation: animate 5s linear infinite;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.naming:hover{
+    cursor: url("./Capture\ d’écran\ \(3\).png"),auto;
+}
+@keyframes animate {
+    to{
+        background-position: -200px;
+    }
+}
