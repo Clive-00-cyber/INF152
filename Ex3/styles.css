@@ -1,0 +1,52 @@
+
+/* Style du menu principal */
+.menu-principal {
+    list-style-type: none;
+    display: flex;
+    position: relative; /* Nécessaire pour le positionnement des sous-menus */
+}
+
+.menu-principal li {
+    position: relative; /* Pour positionner les sous-menus */
+}
+
+.menu-principal li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Style des sous-menus */
+.sous-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positionne juste en dessous du parent */
+    left: 0; 
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000; /* Assure que le menu est au-dessus des autres éléments */
+}
+
+.sous-menu li {
+    width: 100%;
+}
+
+/* Affichage du sous-menu au survol */
+.deroulant:hover .sous-menu {
+    display: block;
+}
+
+/* Style pour les éléments du sous-menu */
+.sous-menu li a {
+    text-align: left;
+}
+
+.sous-menu li a:hover {
+    background-color: #666;
+    margin-left: -20px;
+    width: 160px;
+}

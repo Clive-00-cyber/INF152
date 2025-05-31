@@ -1,0 +1,83 @@
+
+body {
+    Width: 100%; /* Make body width responsive */
+    Margin: 0; /* Reset default margin */
+    Font-size: 16px; /* Adjust base font size for better scaling */
+    font-family: 'barolw';
+}
+h5, h6 {
+    Margin: 0;
+}
+h6 {
+    Text-decoration: underline;
+}
+
+
+.grid {
+    display: grid;
+    Grid-template-columns:repeat(2,1fr); /* Stack items on smaller screens */
+    Grid-template-rows: 300px 300px 300px; /* Flexible rows */
+    Align-items: center;
+    Justify-items: center;
+}
+/* Updated grid item styles */
+.i2, .i3, .i4, .i5 {
+    Background-size: cover;
+    Background-position: center;
+    Background-repeat: no-repeat;
+    Width: 100%; /* Take full width of the grid */
+    Height: 300px; /* Fixed height for better consistency */
+}
+/* Specific background images */
+.i2 {
+    Background-image: url('./images/OIP.jpeg');
+}
+.i3 {
+    Background-image: url('./images/splash.bmp');
+}
+.i4 {
+    Background-image: url('./images/OIP\ \(1\).jpeg');
+}
+.i5 {
+    Background-image: url('./images/télécharger\ \(1\).jpeg');
+}
+.sub {
+    Width: 400px; /* Adjust width for smaller screens */
+    Margin: 0px auto;
+    Padding-top: 200px;
+    Text-align: center;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .head {
+        Height: 60vh; /* Increase height for better visibility */
+    }
+    nav {
+        Flex-direction: column;
+        Align-items: flex-start;
+    }
+    nav div {
+        Margin: 10px 0;
+    }
+    .creatives {
+        Font-size: 2.5em;
+    }
+    .grid {
+        Grid-template-columns: 1fr;
+    }
+    .i2, .i3, .i4, .i5 {
+        Height: 300px;
+    }
+    .flex {
+        display: flex;
+        flex-direction: column;
+        row-gap: 70px;
+    }
+    .fini{
+        grid-template-columns: repeat(2,1fr) ;
+        display: grid;
+        object-fit: cover;
+        grid-template-rows: repeat(2,1fr);
+    }
+}

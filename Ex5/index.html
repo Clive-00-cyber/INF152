@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire DCA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-edit"></i> Formulaire DCA</h1>
+            <p>Veuillez remplir tous les champs requis</p>
+        </div>
+       
+        <div class="form-container">
+            <form id="myForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="required">Prénom</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Votre prénom">
+                        <div class="error-message" id="firstNameError">Veuillez entrer votre prénom</div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="lastName" class="required">Nom</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Votre nom">
+                        <div class="error-message" id="lastNameError">Veuillez entrer votre nom</div>
+                    </div>
+                </div>
+               
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" class="required">Adresse Email</label>
+                        <input type="email" id="email" name="email" placeholder="exemple@domaine.com">
+                        <div class="error-message" id="emailError">Veuillez entrer une adresse email valide</div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0-00-00-00-00 ">
+                    </div>
+                </div>
+               
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password" class="required">Mot de passe</label>
+                        <input type="password" id="password" name="password" placeholder="Créez un mot de passe">
+                        <div class="error-message" id="passwordError">Le mot de passe doit contenir au moins 8 caractères</div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="confirmPassword" class="required">Confirmer le mot de passe</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmez votre mot de passe">
+                        <div class="error-message" id="confirmPasswordError">Les mots de passe ne correspondent pas</div>
+                    </div>
+                </div>
+               
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="birthdate">Date de naissance</label>
+                        <input type="date" id="birthdate" name="birthdate">
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="country" class="required">Pays</label>
+                        <select id="country" name="country">
+                            <option value="">Sélectionnez un pays</option>
+                            <option value="fr">France</option>
+                            <option value="ca">Canada</option>
+                            <option value="cam">Cameroun</option>
+                            <option value="ci">Ciel</option>
+                        </select>
+                        <div class="error-message" id="countryError">Veuillez sélectionner un pays</div>
+                    </div>
+                </div>
+               
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="required">Genre</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Masculin</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Féminin</label>
+                            </div>
+                            
+                        </div>
+                        <div class="error-message" id="genderError">Veuillez sélectionner votre genre</div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label>Langues parlées</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="french" name="languages" value="french">
+                                <label for="french">Français</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="english" name="languages" value="english">
+                                <label for="english">Anglais</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="spanish" name="languages" value="spanish">
+                                <label for="spanish">Japonais</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="message" class="required">Message</label>
+                        <textarea id="message" name="message" placeholder="Votre message..."></textarea>
+                        <div class="error-message" id="messageError">Veuillez entrer un message</div>
+                    </div>
+                </div>
+               
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label class="required">Conditions d'utilisation</label>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="terms" name="terms">
+                            <label for="terms">J'accepte les conditions d'utilisation et la politique de confidentialité</label>
+                        </div>
+                        <div class="error-message" id="termsError">Vous devez accepter les conditions</div>
+                    </div>
+                </div>
+               
+                <button type="submit" class="btn-submit">Soumettre le formulaire</button>
+                 <button class="btn-submit"><a href="/index.html">Back</a></button> 
+            </form>
+           
+            <div class="confirmation-message" id="confirmation">
+                <i class="fas fa-check-circle"></i>
+                <h2>Formulaire soumis avec succès !</h2>
+                <p>Merci pour votre soumission. Nous avons bien reçu vos informations et vous contacterons bientôt.</p>
+            </div>
+        </div>
+       
+        <div class="footer">
+            <p>&copy; 2023 Formulaire Complet. Tous droits réservés.</p>
+        </div>
+    </div>
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('myForm');
+            const confirmation = document.getElementById('confirmation');
+           
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+               
+                if (validateForm()) {
+                    // Simuler l'envoi du formulaire (dans un cas réel, vous utiliseriez fetch ou XMLHttpRequest)
+                    form.style.display = 'none';
+                    confirmation.style.display = 'block';
+                   
+                    // Réinitialiser le formulaire après 5 secondes (simulation)
+                    setTimeout(function() {
+                        form.reset();
+                        form.style.display = 'block';
+                        confirmation.style.display = 'none';
+                    }, 5000);
+                }
+            });
+           
+            // Fonction de validation du formulaire
+            function validateForm() {
+                let isValid = true;
+               
+                // Validation du prénom
+                const firstName = document.getElementById('firstName');
+                const firstNameError = document.getElementById('firstNameError');
+                if (!firstName.value.trim()) {
+                    showError(firstName, firstNameError);
+                    isValid = false;
+                } else {
+                    hideError(firstName, firstNameError);
+                }
+               
+                // Validation du nom
+                const lastName = document.getElementById('lastName');
+                const lastNameError = document.getElementById('lastNameError');
+                if (!lastName.value.trim()) {
+                    showError(lastName, lastNameError);
+                    isValid = false;
+                } else {
+                    hideError(lastName, lastNameError);
+                }
+               
+                // Validation de l'email
+                const email = document.getElementById('email');
+                const emailError = document.getElementById('emailError');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value)) {
+                    showError(email, emailError);
+                    isValid = false;
+                } else {
+                    hideError(email, emailError);
+                }
+               
+                // Validation du mot de passe
+                const password = document.getElementById('password');
+                const passwordError = document.getElementById('passwordError');
+                if (password.value.length < 8) {
+                    showError(password, passwordError);
+                    isValid = false;
+                } else {
+                    hideError(password, passwordError);
+                }
+               
+                // Validation de la confirmation du mot de passe
+                const confirmPassword = document.getElementById('confirmPassword');
+                const confirmPasswordError = document.getElementById('confirmPasswordError');
+                if (password.value !== confirmPassword.value) {
+                    showError(confirmPassword, confirmPasswordError);
+                    isValid = false;
+                } else {
+                    hideError(confirmPassword, confirmPasswordError);
+                }
+               
+                // Validation du pays
+                const country = document.getElementById('country');
+                const countryError = document.getElementById('countryError');
+                if (!country.value) {
+                    showError(country, countryError);
+                    isValid = false;
+                } else {
+                    hideError(country, countryError);
+                }
+               
+                // Validation du genre
+                const gender = document.querySelectorAll('input[name="gender"]');
+                const genderError = document.getElementById('genderError');
+                let genderSelected = false;
+                gender.forEach(radio => {
+                    if (radio.checked) genderSelected = true;
+                });
+                if (!genderSelected) {
+                    genderError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    genderError.style.display = 'none';
+                }
+               
+                // Validation du message
+                const message = document.getElementById('message');
+                const messageError = document.getElementById('messageError');
+                if (!message.value.trim()) {
+                    showError(message, messageError);
+                    isValid = false;
+                } else {
+                    hideError(message, messageError);
+                }
+               
+                // Validation des conditions
+                const terms = document.getElementById('terms');
+                const termsError = document.getElementById('termsError');
+                if (!terms.checked) {
+                    termsError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    termsError.style.display = 'none';
+                }
+               
+                return isValid;
+            }
+           
+            // Fonctions pour afficher/cacher les erreurs
+            function showError(input, errorElement) {
+                input.style.borderColor = '#e74c3c';
+                errorElement.style.display = 'block';
+            }
+           
+            function hideError(input, errorElement) {
+                input.style.borderColor = '#ddd';
+                errorElement.style.display = 'none';
+            }
+           
+            // Validation en temps réel
+            document.querySelectorAll('input, select, textarea').forEach(element => {
+                element.addEventListener('input', function() {
+                    if (this.id === 'firstName' && this.value.trim()) {
+                        hideError(this, document.getElementById('firstNameError'));
+                    }
+                    if (this.id === 'lastName' && this.value.trim()) {
+                        hideError(this, document.getElementById('lastNameError'));
+                    }
+                    if (this.id === 'email') {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (emailRegex.test(this.value)) {
+                            hideError(this, document.getElementById('emailError'));
+                        }
+                    }
+                    if (this.id === 'password' && this.value.length >= 8) {
+                        hideError(this, document.getElementById('passwordError'));
+                    }
+                    if (this.id === 'confirmPassword') {
+                        const password = document.getElementById('password');
+                        if (this.value === password.value) {
+                            hideError(this, document.getElementById('confirmPasswordError'));
+                        }
+                    }
+                    if (this.id === 'country' && this.value) {
+                        hideError(this, document.getElementById('countryError'));
+                    }
+                    if (this.id === 'message' && this.value.trim()) {
+                        hideError(this, document.getElementById('messageError'));
+                    }
+                });
+            });
+           
+            // Validation des conditions en temps réel
+            document.getElementById('terms').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('termsError').style.display = 'none';
+                }
+            });
+        });
+    </script> -->
+</body>
+</html>
