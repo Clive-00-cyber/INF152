@@ -151,7 +151,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .language-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 60px;
     column-gap: 30px;
     justify-items: center;
@@ -256,6 +256,7 @@ footer {
     align-items: center;
     height:250px ;
     background:transparent;
+    color: white;
     
 }
 
